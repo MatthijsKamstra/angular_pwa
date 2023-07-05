@@ -30,5 +30,5 @@ npm install @angular/cdk
 
 - https://angular.io/guide/service-worker-getting-started
 - https://hackernoon.com/building-progressive-web-application-pwa-with-angular
-- https://ionicframework.com/docs/angular/pwa
 - https://blog.briebug.com/blog/angular-progressive-web-application
+- https://ionicframework.com/docs/angular/pwa (with ionic firebase)
