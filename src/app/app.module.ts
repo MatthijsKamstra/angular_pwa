@@ -22,40 +22,41 @@ import { ColorsComponent } from './pages/styleguide/colors/colors.component';
 import { TestPipe } from './_test/test.pipe';
 import { TestComponent } from './_test/test/test.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { PlatformModule } from '@angular/cdk/platform';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    HeroComponent,
-    FooterComponent,
-    IconsComponent,
-    HomePageComponent,
-    AboutPageComponent,
-    DashboardPageComponent,
-    UsersPageComponent,
-    ProductsPageComponent,
-    ProductsInfoPageComponent,
-    NotFoundPageComponent,
-    StyleguideComponent,
-    ColorsComponent,
-    TestPipe,
-    TestComponent
-  ],
-  imports: [
-    BrowserModule,
-HttpClientModule,
-FormsModule,
-
-    AppRoutingModule,
-     ServiceWorkerModule.register('ngsw-worker.js', {
-       enabled: !isDevMode(),
-       // Register the ServiceWorker as soon as the application is stable
-       // or after 30 seconds (whichever comes first).
-       registrationStrategy: 'registerWhenStable:30000'
-     })
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		NavComponent,
+		HeroComponent,
+		FooterComponent,
+		IconsComponent,
+		HomePageComponent,
+		AboutPageComponent,
+		DashboardPageComponent,
+		UsersPageComponent,
+		ProductsPageComponent,
+		ProductsInfoPageComponent,
+		NotFoundPageComponent,
+		StyleguideComponent,
+		ColorsComponent,
+		TestPipe,
+		TestComponent
+	],
+	imports: [
+		BrowserModule,
+		HttpClientModule,
+		FormsModule,
+		AppRoutingModule,
+		PlatformModule, // <-- Import here
+		ServiceWorkerModule.register('ngsw-worker.js', {
+			enabled: !isDevMode(),
+			// Register the ServiceWorker as soon as the application is stable
+			// or after 30 seconds (whichever comes first).
+			registrationStrategy: 'registerWhenStable:30000'
+		})
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
