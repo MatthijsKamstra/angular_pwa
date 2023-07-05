@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+/**
+7-1 Sass Architecture
+
+- https://sass-guidelin.es/#the-7-1-pattern
+- https://gist.github.com/rveitch/84cea9650092119527bc
+**/
+
+// abstracts
+@import "./styles/abstracts/variables";
+@import "./styles/abstracts/vars_colors";
+// @import "./styles/abstracts/debug";
+// @import "./styles/abstracts/mixins";
+// @import "./styles/abstracts/functions";
+// @import "./styles/abstracts/media-queries";
+
+/*! #{$project-name} v#{$version} */
+
+// vendors
+
+// base
+@import "./styles/base/colors";
+@import "./styles/base/base";
+// @import "./styles/base/root";
+// @import "./styles/base/spacing";
+// @import "./styles/base/typography";
+
+// layout
+// @import "./styles/layout/footer";
+
+// components / modules
+// @import "./styles/components/btn";
+// @import "./styles/components/media";
+
+// pages
+// @import "./styles/pages/404";
+
+// utils
+// @import "./styles/base/typowrapper";
+
+

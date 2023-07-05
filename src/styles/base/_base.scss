@@ -1,0 +1,76 @@
+// Set up layout to push the Footer to the bottom
+html,
+body {
+  height: 100%;
+  background-color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+// change `$angular-root-id` in `_variables` to wrap scss for specific root id style name
+#{$angular-root-id},
+app-root,
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  main {
+    flex-shrink: 0;
+    > section,
+    > .container {
+      padding: 0 0 0 0;
+    }
+  }
+}
+// angular specific
+app-root {
+  // border: 10px solid green;
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  // header {
+  // z-index: 100;
+  //   // display: block;
+  //   // border: 10px solid yellow;
+  //   app-nav {
+  //     // display: block;
+  //     // border: 10px solid darkblue;
+  //   }
+  // }
+  main {
+    flex-shrink: 0;
+    padding-top: 60px;
+    // border: 10px solid violet;
+    // > section,
+    // > .container {
+    //   padding-top: 60px;
+    // }
+  }
+  app-footer {
+    // border: 10px solid gold;
+    margin-top: auto !important;
+  }
+}
+
+// reset blue focus color
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border-color: $black;
+  box-shadow: 0 0 0 0rem rgba(1, 105, 200, 0.25) !important; // override bootstrap colors/box-shadow
+}
+
+// hmmmm
+.hidden {
+  visibility: hidden;
+}
+.display-none {
+  display: none !important;
+}
+
+
+

@@ -1,0 +1,35 @@
+@import "../abstracts/vars_colors";
+
+// scss map
+$colors: (
+    "black": $black
+);
+
+/* backgrounds colors */
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
+
+/* Fills colors for SVG */
+@each $name, $color in $colors {
+  .fill-#{$name} {
+    fill: $color;
+  }
+}
+
+/* Text colors */
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color;
+  }
+}
+
+/* Border colors */
+@each $name, $color in $colors {
+  .border-#{$name} {
+    border: 1px solid $color;
+  }
+}
+
