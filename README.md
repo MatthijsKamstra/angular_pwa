@@ -22,6 +22,10 @@ ng build
 http-server -p 8080 -c-1 dist/angular_pwa
 ```
 
+```bash
+npm install @angular/cdk
+```
+
 ## Resource
 
 - https://angular.io/guide/service-worker-getting-started
