@@ -10,6 +10,7 @@ import { filter, map } from 'rxjs';
 export class UpdateVersionComponent implements OnInit {
 
 	modalVersion: boolean;
+	info: string = '[nothing]';
 
 	constructor(
 		private swUpdate: SwUpdate
@@ -23,6 +24,7 @@ export class UpdateVersionComponent implements OnInit {
 				filter((evt: any): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
 				map((evt: any) => {
 					console.info(`currentVersion=[${evt.currentVersion} | latestVersion=[${evt.latestVersion}]`);
+					this.info = `currentVersion=[${evt.currentVersion} | latestVersion=[${evt.latestVersion}]`;
 					this.modalVersion = true;
 				}),
 			);
