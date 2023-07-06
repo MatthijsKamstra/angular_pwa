@@ -11,6 +11,7 @@ export class UpdateVersionComponent implements OnInit {
 
 	modalVersion: boolean;
 	info: string = '[nothing]';
+	updatesAvailable: any;
 
 	constructor(
 		private swUpdate: SwUpdate
@@ -20,6 +21,7 @@ export class UpdateVersionComponent implements OnInit {
 
 	public ngOnInit(): void {
 		if (this.swUpdate.isEnabled) {
+			console.info(this.swUpdate.isEnabled);
 			this.swUpdate.versionUpdates.pipe(
 				filter((evt: any): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
 				map((evt: any) => {
@@ -28,6 +30,14 @@ export class UpdateVersionComponent implements OnInit {
 					this.modalVersion = true;
 				}),
 			);
+
+			this.updatesAvailable = this.swUpdate.versionUpdates.pipe(
+				filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
+				map(evt => ({
+					type: 'UPDATE_AVAILABLE',
+					current: evt.currentVersion,
+					available: evt.latestVersion,
+				})));
 		}
 	}
 
