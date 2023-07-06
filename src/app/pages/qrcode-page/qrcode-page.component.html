@@ -1,19 +1,18 @@
-<div style="text-align:center">
-	<h1>
-		@techiediaries/ngx-qrcode demo
-	</h1>
-</div>
+<section class="container">
 
-<!--
-	 <ngx-qrcode [elementType]="elementType" [value]="value" cssClass="aclass"
+
+	<!--
+		<ngx-qrcode [elementType]="elementType" [value]="value" cssClass="aclass"
 	[errorCorrectionLevel]="correctionLevel2"></ngx-qrcode>
- -->
+-->
 
 
 
-<ngx-qrcode [elementType]="elementType" [errorCorrectionLevel]="correctionLevel" [value]="value" alt="Demo QR Code"
-	cssClass="bshadow"></ngx-qrcode>
+	<ngx-qrcode [elementType]="elementType" [errorCorrectionLevel]="correctionLevel" [value]="value" alt="Demo QR Code"
+		cssClass="bshadow"></ngx-qrcode>
 
 
 
-<textarea [(ngModel)]="value"></textarea>
+	<textarea [(ngModel)]="value"></textarea>
+
+</section>

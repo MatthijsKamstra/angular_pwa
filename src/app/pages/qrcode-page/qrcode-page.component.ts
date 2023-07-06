@@ -21,11 +21,17 @@ export class QrcodePageComponent implements OnInit {
 
 
 	ngOnInit(): void {
-		this.value = this.getCurrentURL();
+
+
+		console.log(window.location);
+
+
+		// this.value = this.getCurrentURL();
+		this.value = window.location.origin;
 	}
 
 	getCurrentURL() {
-		return window.location.href
+		return window.location.href;
 	}
 
 }
