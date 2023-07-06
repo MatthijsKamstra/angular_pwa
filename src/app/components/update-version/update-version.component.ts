@@ -42,9 +42,6 @@ export class UpdateVersionComponent implements OnInit {
 
 	}
 
-
-
-
 	public updateVersion(): void {
 		this.modalVersion = false;
 		window.location.reload();
