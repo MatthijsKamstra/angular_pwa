@@ -26,6 +26,24 @@ http-server -p 8080 -c-1 dist/angular_pwa
 npm install @angular/cdk
 ```
 
+http-server install and use
+
+```bash
+npm install http-server -g
+http-server -p 8080 -c-1 dist/<project-name>
+```
+
+## Platform info
+
+(cdk install is weird)
+
+- https://github.com/bestiejs/platform.js
+
+```bash
+npm i --save platform
+npm i --save-dev @types/platform
+```
+
 ## Resource
 
 - https://angular.io/guide/service-worker-getting-started

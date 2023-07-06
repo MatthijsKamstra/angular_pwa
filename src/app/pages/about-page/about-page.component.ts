@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Platform } from '@angular/cdk/platform';
+
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
 import { filter, map } from 'rxjs';
+
+import * as platform from 'platform';
 
 @Component({
 	selector: 'app-about-page',
@@ -16,7 +18,7 @@ export class AboutPageComponent implements OnInit {
 	modalPwaPlatform: string | undefined;
 
 	constructor(
-		private platform: Platform,
+		// private platform: Platform,
 		private swUpdate: SwUpdate
 	) {
 		this.isOnline = false;
@@ -39,7 +41,7 @@ export class AboutPageComponent implements OnInit {
 			);
 		}
 
-		this.loadModalPwa();
+		// this.loadModalPwa();
 	}
 
 	private updateOnlineStatus(): void {
@@ -56,22 +58,22 @@ export class AboutPageComponent implements OnInit {
 		this.modalVersion = false;
 	}
 
-	private loadModalPwa(): void {
-		if (this.platform.ANDROID) {
-			window.addEventListener('beforeinstallprompt', (event: any) => {
-				event.preventDefault();
-				this.modalPwaEvent = event;
-				this.modalPwaPlatform = 'ANDROID';
-			});
-		}
+	// private loadModalPwa(): void {
+	// 	if (this.platform.ANDROID) {
+	// 		window.addEventListener('beforeinstallprompt', (event: any) => {
+	// 			event.preventDefault();
+	// 			this.modalPwaEvent = event;
+	// 			this.modalPwaPlatform = 'ANDROID';
+	// 		});
+	// 	}
 
-		if (this.platform.IOS && this.platform.SAFARI) {
-			const isInStandaloneMode = ('standalone' in window.navigator) && ((<any>window.navigator)['standalone']);
-			if (!isInStandaloneMode) {
-				this.modalPwaPlatform = 'IOS';
-			}
-		}
-	}
+	// 	if (this.platform.IOS && this.platform.SAFARI) {
+	// 		const isInStandaloneMode = ('standalone' in window.navigator) && ((<any>window.navigator)['standalone']);
+	// 		if (!isInStandaloneMode) {
+	// 			this.modalPwaPlatform = 'IOS';
+	// 		}
+	// 	}
+	// }
 
 	public addToHomeScreen(): void {
 		this.modalPwaEvent.prompt();
@@ -82,9 +84,9 @@ export class AboutPageComponent implements OnInit {
 		this.modalPwaPlatform = undefined;
 	}
 
-	getPlatform(): any {
-		return JSON.stringify(this.platform);
-	}
+	// getPlatform(): any {
+	// 	return JSON.stringify(this.platform);
+	// }
 	getSwUpdate(): any {
 		return JSON.stringify(this.swUpdate);
 	}
@@ -104,18 +106,23 @@ export class AboutPageComponent implements OnInit {
 	}
 
 	iOS(): boolean {
+		console.log(navigator.platform);
+
 		return [
 			'iPad Simulator',
 			'iPhone Simulator',
 			'iPod Simulator',
 			'iPad',
 			'iPhone',
-			'iPod'
+			'iPod',
+			'MacIntel'
 		].includes(navigator.platform)
 			// iPad on iOS 13 detection
 			|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 	}
 
-
+	getPlatformJS(): string {
+		return `${JSON.stringify(platform, null, 2)}`;
+	}
 
 }
