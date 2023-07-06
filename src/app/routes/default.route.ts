@@ -7,7 +7,9 @@ import { StyleguideComponent } from "../pages/styleguide/styleguide.component";
 import { UsersPageComponent } from "../pages/users-page/users-page.component";
 
 export const defaultRoutes: Routes = [
-	{ path: "home", title: "Home", component: HomePageComponent },
+	{ path: "", pathMatch: 'full', component: HomePageComponent },
+	// { path: "/", pathMatch: 'full', title: "Home", component: HomePageComponent },
+	// { path: "home", title: "Home", component: HomePageComponent },
 	{ path: "about", title: "About", component: AboutPageComponent },
 	{ path: "dashboard", title: "Dashboard", component: DashboardPageComponent },
 	{ path: "styleguide", title: "Styleguide", component: StyleguideComponent },
