@@ -10,19 +10,7 @@
 		platea dictumst.</p>
 </section>
 
-<div class="container py-3">
-	<h1>Angular Progressive Web Application (PWA)</h1>
-
-	<div class="row my-5">
-		<div class="col text-end">
-			Status:
-		</div>
-		<div class="col">
-			<span class="badge bg-success" *ngIf="isOnline">Online</span>
-			<span class="badge bg-danger" *ngIf="!isOnline">Offline</span>
-		</div>
-	</div>
-</div>
+<app-online-status></app-online-status>
 
 <div class="w-100 position-absolute top-0" *ngIf="modalVersion">
 	<div class="alert alert-secondary m-2">

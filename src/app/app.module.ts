@@ -22,6 +22,7 @@ import { ColorsComponent } from './pages/styleguide/colors/colors.component';
 import { TestPipe } from './_test/test.pipe';
 import { TestComponent } from './_test/test/test.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { OnlineStatusComponent } from './components/online-status/online-status.component';
 // import { PlatformModule } from '@angular/cdk/platform';
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 		StyleguideComponent,
 		ColorsComponent,
 		TestPipe,
-		TestComponent
+		TestComponent,
+  OnlineStatusComponent
 	],
 	imports: [
 		BrowserModule,
