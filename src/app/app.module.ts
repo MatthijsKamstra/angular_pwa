@@ -24,7 +24,8 @@ import { TestComponent } from './_test/test/test.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { OnlineStatusComponent } from './components/online-status/online-status.component';
 import { UpdateVersionComponent } from './components/update-version/update-version.component';
-// import { PlatformModule } from '@angular/cdk/platform';
+import { AddToHomescreenComponent } from './components/add-to-homescreen/add-to-homescreen.component';
+
 
 @NgModule({
 	declarations: [
@@ -44,8 +45,9 @@ import { UpdateVersionComponent } from './components/update-version/update-versi
 		ColorsComponent,
 		TestPipe,
 		TestComponent,
-  OnlineStatusComponent,
-  UpdateVersionComponent
+		OnlineStatusComponent,
+		UpdateVersionComponent,
+		AddToHomescreenComponent
 	],
 	imports: [
 		BrowserModule,

@@ -1,0 +1,24 @@
+<div class="w-100 position-absolute bottom-0 start-0"
+	*ngIf="modalPwaPlatform === 'ANDROID' || modalPwaPlatform === 'IOS'" style="z-index: 1000000;">
+	<div class="alert alert-warning alert-dismissible fade show m-2" role="alert">
+
+		<!-- Android -->
+		<div *ngIf="modalPwaPlatform === 'ANDROID'" (click)="addToHomeScreen()">
+			Add this WEB app to home screen
+		</div>
+
+
+		<!-- iOS with Safari -->
+		<div *ngIf="modalPwaPlatform === 'IOS'">
+			To install this WEB app on your device, tap the "Menu" button
+			<!-- <img src="/assets/share.png" class="ios-menu m-0" width="30px" /> -->
+			<app-icons icon="fa-upload"></app-icons>
+			<br />
+			and then "Add to home screen" button
+			<app-icons icon="fa-plus-square-o"></app-icons>
+		</div>
+
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+			(click)="closePwa()"></button>
+	</div>
+</div>
