@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1688656485081,
+  "timestamp": 1688659395428,
   "index": "./index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "./favicon.ico",
         "./index.html",
-        "./main.61effcc7f3303ab8.js",
+        "./main.bda2b97b6d027c65.js",
         "./manifest.webmanifest",
         "./polyfills.e03db229fb061cd2.js",
         "./runtime.3be23f95b22bab6d.js",
@@ -30,6 +30,7 @@
         "ignoreVary": true
       },
       "urls": [
+        "./assets/Share-button-iOS.png",
         "./assets/fonts/.gitkeep",
         "./assets/icons/icon-128x128.png",
         "./assets/icons/icon-144x144.png",
@@ -45,6 +46,9 @@
         "./assets/images/logo/.gitkeep",
         "./assets/images/logo/logo.svg",
         "./assets/images/svg/.gitkeep",
+        "./assets/safari_action_button_38x50.png",
+        "./assets/share-icon-computer-icons-button-graphical-user-interface-safari-png-favpng-8NuZ6x92k4r60jzmmGzbeCypr.jpg",
+        "./assets/share.png",
         "./iconfont.5243aaf9e1452584.svg",
         "./iconfont.5ec6439cca6c39c3.ttf",
         "./iconfont.b11484cab7088a04.woff2",
@@ -55,6 +59,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "./assets/Share-button-iOS.png": "33f4448bef1c2dee98e3ee0e58ae8f28981e0229",
     "./assets/fonts/.gitkeep": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "./assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "./assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
@@ -70,13 +75,16 @@
     "./assets/images/logo/.gitkeep": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "./assets/images/logo/logo.svg": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "./assets/images/svg/.gitkeep": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "./assets/safari_action_button_38x50.png": "02e5889b77b7f85297a1bea515e3f4db0a9b75a5",
+    "./assets/share-icon-computer-icons-button-graphical-user-interface-safari-png-favpng-8NuZ6x92k4r60jzmmGzbeCypr.jpg": "749b054950406cef6e0590a50dd3f9687aea6fbd",
+    "./assets/share.png": "4284f3bdee6688a4e114c1e3784ef3f342dd6332",
     "./favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "./iconfont.5243aaf9e1452584.svg": "83478262463ac5025e4a7278aac1f3b0d3bcd0b8",
     "./iconfont.5ec6439cca6c39c3.ttf": "97637c0bedc9fb89dce6bbe5363dcac09fdc891a",
     "./iconfont.b11484cab7088a04.woff2": "a614cfba3f329f320abef78a3658da2513c9b16c",
     "./iconfont.ef95473d6e4f0e36.woff": "69f06b71f3e0a76e05745e65cc76a98dee3d561a",
-    "./index.html": "f40fa43f29202e2babb1f836f92b32d05d716ae5",
-    "./main.61effcc7f3303ab8.js": "d35ff90f0cfeeef6e5a9ef58139f22b15e6411b0",
+    "./index.html": "d3c637679e1f01a7ca4835883a50c91ec29d7ffd",
+    "./main.bda2b97b6d027c65.js": "03fdb3b3fbc1212152def79c3ff5db698847d479",
     "./manifest.webmanifest": "1f3cf50be0fa3a915e2eb91534f1f713af158f45",
     "./polyfills.e03db229fb061cd2.js": "5aa270eea610cc467bf4c4815de5496af5ad25e4",
     "./runtime.3be23f95b22bab6d.js": "3fe570a10bad4dfeabb7d1b6f3a16ca334be7ca6",
