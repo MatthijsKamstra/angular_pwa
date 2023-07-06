@@ -63,6 +63,27 @@ npm install angularx-qrcode --save
 - https://medium.com/angular-in-depth/generate-qr-codes-with-angular-10-9305997698df
 - https://www.npmjs.com/package/@techiediaries/ngx-qrcode
 
+## verion
+
+```bash
+git describe --all --long | cut -d "-" -f 3 > version.txt
+```
+
+```bash
+GIT_ID=$(git describe --all --long | cut -d "-" -f 3)
+echo export const version = \{ number: \"$GIT_ID\" \} > src/app/version.ts
+```
+
+```ts
+import { version } from "../version";
+
+export class AppComponent {
+  constructor() {
+    console.log("MyApp version " + version.number);
+  }
+}
+```
+
 ## Resource
 
 - https://angular.io/guide/service-worker-getting-started

@@ -6,6 +6,7 @@ import { productRoutes } from "../../routes/product.route";
 import { testRoutes } from "../../routes/test.route";
 
 import { pagesRoutes } from "../../routes/pages.route";
+import { version } from 'src/app/version';
 
 @Component({
 	selector: 'app-nav',
@@ -19,5 +20,6 @@ export class NavComponent {
 	testRoutes: Routes = testRoutes;
 	pagesRoutes: Routes = pagesRoutes;
 
+	version = version.number;
 
 }
