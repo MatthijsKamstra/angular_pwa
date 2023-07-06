@@ -5,6 +5,8 @@ import { filter, map } from 'rxjs';
 
 import * as platform from 'platform';
 
+
+
 @Component({
 	selector: 'app-about-page',
 	templateUrl: './about-page.component.html',
@@ -16,6 +18,9 @@ export class AboutPageComponent implements OnInit {
 	modalVersion: boolean;
 	modalPwaEvent: any;
 	modalPwaPlatform: string | undefined;
+
+
+	platform: any;
 
 	constructor(
 		// private platform: Platform,
@@ -145,6 +150,10 @@ export class AboutPageComponent implements OnInit {
 	// 	return os;
 	// }
 
+
+	_platform(): any {
+		return platform;
+	}
 
 
 	getPlatformJS(): string {
