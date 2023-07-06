@@ -38,4 +38,8 @@ export class UpdateVersionComponent implements OnInit {
 		this.modalVersion = false;
 	}
 
+	getSwUpdate(): SwUpdate {
+		return this.swUpdate;
+	}
+
 }
