@@ -14,7 +14,7 @@ export const defaultRoutes: Routes = [
 	{ path: "about", title: "About", component: AboutPageComponent },
 	{ path: "qrcode", title: "QR code", component: QrcodePageComponent },
 	{ path: "dashboard", title: "Dashboard", component: DashboardPageComponent },
-	{ path: "styleguide", title: "Styleguide", component: StyleguideComponent },
-	{ path: "users", title: "Users", component: UsersPageComponent },
+	// { path: "styleguide", title: "Styleguide", component: StyleguideComponent },
+	// { path: "users", title: "Users", component: UsersPageComponent },
 ];
 
