@@ -25,6 +25,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { OnlineStatusComponent } from './components/online-status/online-status.component';
 import { UpdateVersionComponent } from './components/update-version/update-version.component';
 import { AddToHomescreenComponent } from './components/add-to-homescreen/add-to-homescreen.component';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { QrcodePageComponent } from './pages/qrcode-page/qrcode-page.component';
 
 
 @NgModule({
@@ -47,10 +49,12 @@ import { AddToHomescreenComponent } from './components/add-to-homescreen/add-to-
 		TestComponent,
 		OnlineStatusComponent,
 		UpdateVersionComponent,
-		AddToHomescreenComponent
+		AddToHomescreenComponent,
+		QrcodePageComponent
 	],
 	imports: [
 		BrowserModule,
+		NgxQRCodeModule,
 		HttpClientModule,
 		FormsModule,
 		AppRoutingModule,
