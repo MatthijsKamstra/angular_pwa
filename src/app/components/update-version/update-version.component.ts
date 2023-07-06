@@ -11,7 +11,7 @@ export class UpdateVersionComponent implements OnInit {
 
 	modalVersion: boolean;
 	info: string = '[nothing]';
-	updatesAvailable: any;
+	updatesAvailable: any = '[nothing]';
 
 	constructor(
 		private swUpdate: SwUpdate
@@ -39,7 +39,11 @@ export class UpdateVersionComponent implements OnInit {
 					available: evt.latestVersion,
 				})));
 		}
+
 	}
+
+
+
 
 	public updateVersion(): void {
 		this.modalVersion = false;
