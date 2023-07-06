@@ -23,6 +23,7 @@ import { TestPipe } from './_test/test.pipe';
 import { TestComponent } from './_test/test/test.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { OnlineStatusComponent } from './components/online-status/online-status.component';
+import { UpdateVersionComponent } from './components/update-version/update-version.component';
 // import { PlatformModule } from '@angular/cdk/platform';
 
 @NgModule({
@@ -43,7 +44,8 @@ import { OnlineStatusComponent } from './components/online-status/online-status.
 		ColorsComponent,
 		TestPipe,
 		TestComponent,
-  OnlineStatusComponent
+  OnlineStatusComponent,
+  UpdateVersionComponent
 	],
 	imports: [
 		BrowserModule,

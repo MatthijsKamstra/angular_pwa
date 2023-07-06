@@ -8,14 +8,11 @@
 		justo viverra ligula, maximus dignissim dolor nunc id arcu. Nullam auctor, ligula ac cursus lobortis, sapien
 		mauris lacinia felis, in ultrices mi dolor quis arcu. Vivamus iaculis tincidunt lobortis. In hac habitasse
 		platea dictumst.</p>
+
+	<h2>app-online-status</h2>
+	<app-online-status></app-online-status>
+
+	<h2>app-update-version</h2>
+	<app-update-version></app-update-version>
+
 </section>
-
-<app-online-status></app-online-status>
-
-<div class="w-100 position-absolute top-0" *ngIf="modalVersion">
-	<div class="alert alert-secondary m-2">
-		<button type="button" class="btn-close position-absolute top-0 end-0 m-1" aria-label="Close"
-			(click)="closeVersion()"></button>
-		A new version of this app is available. <a href="" (click)="updateVersion()">Update now</a>
-	</div>
-</div>

@@ -1,0 +1,10 @@
+<div class="w-100" *ngIf="modalVersion" style="z-index: 1000000; position: absolute; top:0px; left:0px;">
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+
+		A new version of this app is available. <a href="" (click)="updateVersion()">Update now</a>
+
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+			(click)="closeVersion()"></button>
+
+	</div>
+</div>
