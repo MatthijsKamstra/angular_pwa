@@ -13,20 +13,21 @@ export class AddToHomescreenComponent implements OnInit {
 	modalPwaEvent: any;
 	modalPwaPlatform: string | undefined;
 
+	_platform!: PlatformService;
+
 	constructor(
 		private platform: PlatformService
 	) {
-
 	}
 
 	public ngOnInit(): void {
+		this._platform = this.platform;
+
 		console.log('this.platform.ANDROID: ' + this.platform.ANDROID);
 		console.log('this.platform.SAFARI: ' + this.platform.SAFARI);
 
 		console.log('this.platform.getName(): ' + this.platform.getName());
 		console.log('this.platform.getOS(): ' + this.platform.getOS());
-
-
 
 		this.loadModalPwa();
 	}

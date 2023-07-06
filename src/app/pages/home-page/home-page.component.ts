@@ -23,7 +23,9 @@ export class HomePageComponent implements OnInit {
 		window.addEventListener('online', this.updateOnlineStatus.bind(this));
 		window.addEventListener('offline', this.updateOnlineStatus.bind(this));
 
+		console.log('this.swUpdate');
 		console.log(this.swUpdate);
+		console.log('this.swUpdate.isEnabled');
 		console.log(this.swUpdate.isEnabled);
 
 		if (this.swUpdate.isEnabled) {

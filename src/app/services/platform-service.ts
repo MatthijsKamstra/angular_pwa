@@ -36,8 +36,8 @@ export class PlatformService {
 	}
 
 
-	iOSversion(): string {
-		if (this.iOS()) { // <-- Use the one here above
+	__iOSversion(): string {
+		if (this.__iOS()) { // <-- Use the one here above
 			if (window.indexedDB) { return 'iOS 8 and up'; }
 			if (window.SpeechSynthesisUtterance) { return 'iOS 7'; }
 			// if (window.webkitAudioContext) { return 'iOS 6'; }
@@ -48,7 +48,7 @@ export class PlatformService {
 		return 'Not an iOS device';
 	}
 
-	iOS(): boolean {
+	__iOS(): boolean {
 		console.log(navigator.platform);
 
 		return [
@@ -94,7 +94,7 @@ export class PlatformService {
 	}
 
 
-	getPlatformJS(): string {
+	__getPlatformJS(): string {
 		return `${JSON.stringify(platform, null, 2)}`;
 	}
 }
