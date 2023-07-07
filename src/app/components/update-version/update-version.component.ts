@@ -21,7 +21,7 @@ export class UpdateVersionComponent implements OnInit {
 
 	public ngOnInit(): void {
 		if (this.swUpdate.isEnabled) {
-			console.info('this.swUpdate.isEnabled' + this.swUpdate.isEnabled);
+			console.info('this.swUpdate.isEnabled: ' + this.swUpdate.isEnabled);
 			this.swUpdate.versionUpdates.pipe(
 				filter((evt: any): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
 				map((evt: any) => {

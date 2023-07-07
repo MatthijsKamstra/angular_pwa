@@ -35,7 +35,7 @@ http-server -p 8080 -c-1 dist/<project-name>
 
 ## Platform info
 
-(cdk install is weird)
+(cdk install is weird, so I tried platform.js)
 
 - https://github.com/bestiejs/platform.js
 
@@ -63,7 +63,7 @@ npm install angularx-qrcode --save
 - https://medium.com/angular-in-depth/generate-qr-codes-with-angular-10-9305997698df
 - https://www.npmjs.com/package/@techiediaries/ngx-qrcode
 
-## verion
+## Create a Version
 
 ```bash
 git describe --all --long | cut -d "-" -f 3 > version.txt
