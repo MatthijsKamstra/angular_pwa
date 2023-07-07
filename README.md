@@ -33,6 +33,12 @@ npm install http-server -g
 http-server -p 8080 -c-1 dist/<project-name>
 ```
 
+```bash
+ng build
+npm install http-server -g
+http-server -p 8080 -c-1 dist/angular_pwa
+```
+
 ## Platform info
 
 (cdk install is weird, so I tried platform.js)
