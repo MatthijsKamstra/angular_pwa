@@ -27,6 +27,7 @@ import { UpdateVersionComponent } from './components/update-version/update-versi
 import { AddToHomescreenComponent } from './components/add-to-homescreen/add-to-homescreen.component';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { QrcodePageComponent } from './pages/qrcode-page/qrcode-page.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { QrcodePageComponent } from './pages/qrcode-page/qrcode-page.component';
 		OnlineStatusComponent,
 		UpdateVersionComponent,
 		AddToHomescreenComponent,
-		QrcodePageComponent
+		QrcodePageComponent,
+		NotificationsComponent
 	],
 	imports: [
 		BrowserModule,

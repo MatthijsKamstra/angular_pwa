@@ -75,6 +75,8 @@ npm install angularx-qrcode --save
 git describe --all --long | cut -d "-" -f 3 > version.txt
 ```
 
+See current version of this bash file: [git.sh](git.sh)
+
 ```bash
 GIT_ID=$(git describe --all --long | cut -d "-" -f 3)
 echo export const version = \{ number: \"$GIT_ID\" \} > src/app/version.ts
@@ -90,6 +92,17 @@ export class AppComponent {
 }
 ```
 
+## update
+
+SwUpdate service
+
+- https://angular.io/guide/service-worker-communications#updating-to-the-latest-version
+- https://www.digitalocean.com/community/tutorials/angular-service-worker-updates
+
+## PWA assets
+
+https://www.npmjs.com/package/pwa-asset-generator
+
 ## Resource
 
 - https://angular.io/guide/service-worker-getting-started
@@ -98,4 +111,5 @@ export class AppComponent {
 - https://ionicframework.com/docs/angular/pwa (with ionic firebase)
 - https://www.linkedin.com/pulse/build-simple-pwa-from-scratch-html-css-javascript-ishaan-verma/?utm_source=share&utm_medium=member_ios&utm_campaign=share_via
 - https://whatpwacando.today/
+- https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
 - https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
