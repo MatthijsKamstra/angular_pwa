@@ -25,7 +25,7 @@ export class QrcodePageComponent implements OnInit {
 		let pathname = window.location.pathname;
 		let pathnameArr = pathname.split('/');
 
-		this.value = window.location.origin + pathnameArr[0];
+		this.value = window.location.origin + pathnameArr[1];
 	}
 
 	getCurrentURL() {
