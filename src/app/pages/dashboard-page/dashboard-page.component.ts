@@ -65,6 +65,10 @@ export class DashboardPageComponent {
 					log(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
 					this.notificationService.info(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
 					break;
+				default:
+					console.log(`Other message: ${evt.type} - ${evt}`);
+					log(`Other message: : ${evt.type} - ${evt}`);
+					this.notificationService.info(`Other message: : ${evt.type} - ${evt}`);
 			}
 		});
 	}
