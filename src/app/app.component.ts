@@ -87,6 +87,18 @@ export class AppComponent implements OnInit {
 		});
 	}
 
+	// ____________________________________ db ____________________________________
+
+	addUser() {
+		let obj = {
+			name: 'Subrat',
+		};
+		this.indexedDbService
+			.addUser(obj.name)
+			.then(console.log)
+			.catch(console.warn);
+	}
+
 	// ____________________________________ favicon ____________________________________
 
 	initFavicon() {
