@@ -67,13 +67,13 @@ export class DashboardPageComponent {
 					break;
 				default:
 					console.log(`Other message: ${evt.type} - ${evt}`);
-					log(`Other message: : ${evt.type} - ${evt}`);
-					this.notificationService.info(`Other message: : ${evt.type} - ${evt}`);
+					log(`Other message: ${evt.type} - ${evt}`);
+					this.notificationService.info(`Other message: ${evt.type} - ${evt}`);
 			}
 		});
 	}
 }
 
 function log(msg: string) {
-	console.log(msg);
+	console.log("[LOG] " + msg);
 }

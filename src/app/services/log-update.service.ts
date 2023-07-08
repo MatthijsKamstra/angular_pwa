@@ -7,7 +7,6 @@ import { NotificationService } from './notification.service';
 })
 export class LogUpdateService {
 
-
 	constructor(
 		updates: SwUpdate,
 		private notificationService: NotificationService
@@ -43,7 +42,7 @@ export class LogUpdateService {
 		this.notificationService.info(`HI`);
 	}
 }
-function warn(arg0: string) {
-	console.warn(arg0);
+function warn(msg: string) {
+	console.warn("[WARN] " + msg);
 }
 
