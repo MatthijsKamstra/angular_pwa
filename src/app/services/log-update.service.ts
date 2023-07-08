@@ -7,6 +7,7 @@ import { NotificationService } from './notification.service';
 })
 export class LogUpdateService {
 
+
 	constructor(
 		updates: SwUpdate,
 		private notificationService: NotificationService
@@ -29,5 +30,10 @@ export class LogUpdateService {
 					break;
 			}
 		});
+	}
+
+	hi() {
+		console.log('xxxx');
+		this.notificationService.info(`HI`);
 	}
 }

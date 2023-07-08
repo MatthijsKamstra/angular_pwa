@@ -12,7 +12,9 @@ export class DashboardPageComponent {
 	constructor(
 		private notificationService: NotificationService,
 		private logUpdateService: LogUpdateService,
-	) { }
+	) {
+		this.logUpdateService.hi();
+	}
 
 	onNotificationHandler() {
 		this.notificationService.info('Test info');
