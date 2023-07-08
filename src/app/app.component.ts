@@ -1,6 +1,7 @@
 import { ApplicationRef, Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { interval } from 'rxjs';
+import { IndexedDbService } from './services/indexed-db.service';
 
 @Component({
 	selector: 'app-root',
@@ -13,6 +14,7 @@ export class AppComponent implements OnInit {
 	constructor(
 		private update: SwUpdate,
 		private appRef: ApplicationRef,
+		private indexedDbService: IndexedDbService,
 	) {
 		this.updateClient();
 		this.checkUpdate();
