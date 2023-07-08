@@ -13,15 +13,18 @@ export class PromptUpdateService {
 		swUpdate.versionUpdates
 			.pipe(filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'))
 			.subscribe(evt => {
-				// if (promptUser(evt)) {
-				// 	// Reload the page to update to the latest version.
-				// 	document.location.reload();
-				// }
+				if (promptUser(evt)) {
+					// Reload the page to update to the latest version.
+					document.location.reload();
+				}
 			});
 	}
 
 }
-// function promptUser(evt: VersionReadyEvent) {
-// 	throw new Error('Function not implemented.');
-// }
+
+function promptUser(event: VersionReadyEvent): boolean {
+	console.warn('update');
+	return false;
+}
+
 

@@ -9,12 +9,19 @@ import { SwUpdate } from '@angular/service-worker';
 export class HandleUnrecoverableStateService {
 
 	constructor(updates: SwUpdate) {
+		console.warn('HandleUnrecoverableStateService');
+		console.warn(`updates.isEnabled: ${updates.isEnabled}`);
 		updates.unrecoverable.subscribe(event => {
-			// notifyUser(
-			// 	'An error occurred that we cannot recover from:\n' +
-			// 	event.reason +
-			// 	'\n\nPlease reload the page.'
-			// );
+			notifyUser(
+				'An error occurred that we cannot recover from:\n' +
+				event.reason +
+				'\n\nPlease reload the page.'
+			);
 		});
 	}
 }
+
+function notifyUser(message: string) {
+	console.warn(message);
+}
+
