@@ -32,6 +32,7 @@ import { CheckForUpdateService } from './services/check-for-update.service';
 import { LogUpdateService } from './services/log-update.service';
 import { PromptUpdateService } from './services/prompt-update.service';
 import { AppIsLocalComponent } from './elements/app-is-local/app-is-local.component';
+import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { AppIsLocalComponent } from './elements/app-is-local/app-is-local.compon
 		AddToHomescreenComponent,
 		QrcodePageComponent,
 		NotificationsComponent,
-		AppIsLocalComponent
+		AppIsLocalComponent,
+  SettingsPageComponent
 	],
 	imports: [
 		BrowserModule,
