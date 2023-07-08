@@ -22,4 +22,6 @@ export class NavComponent {
 
 	version = version.number;
 
+	isHiddenIsProduction: boolean = false;
+
 }

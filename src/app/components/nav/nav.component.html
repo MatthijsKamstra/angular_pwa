@@ -65,7 +65,33 @@
 				</ul>
 			</div>
 
-			<span class="badge text-bg-danger opacity-50">{{ version }}</span>
+			<ul class="navbar-nav ms-auto">
+				<span class="navbar-text px-4" *ngIf="!isHiddenIsProduction">
+					<app-is-local></app-is-local>
+				</span>
+				<div class="dropdown ">
+					<button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						<span class="badge text-bg-danger opacity-50">{{ version }}</span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-dark">
+						<li><a class="dropdown-item" routerLink="/home">xxx</a></li>
+						<!-- <li><a class="dropdown-item" routerLink="/home">{{'Home'|translate}}</a></li>
+						<li><a class="dropdown-item" routerLink="/about">{{'About'|translate}}</a></li>
+						<li><a class="dropdown-item" routerLink="/help">{{'Help'|translate}}</a></li>
+						<li><a class="dropdown-item" routerLink="/settings">{{'Settings'|translate}}</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" routerLink="#" (click)="logout()">{{'Log off' | translate}}</a>
+						</li> -->
+
+					</ul>
+				</div>
+			</ul>
+
+
+
 
 		</div>
 

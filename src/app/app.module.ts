@@ -31,6 +31,7 @@ import { NotificationsComponent } from './components/notifications/notifications
 import { CheckForUpdateService } from './services/check-for-update.service';
 import { LogUpdateService } from './services/log-update.service';
 import { PromptUpdateService } from './services/prompt-update.service';
+import { AppIsLocalComponent } from './elements/app-is-local/app-is-local.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { PromptUpdateService } from './services/prompt-update.service';
 		UpdateVersionComponent,
 		AddToHomescreenComponent,
 		QrcodePageComponent,
-		NotificationsComponent
+		NotificationsComponent,
+		AppIsLocalComponent
 	],
 	imports: [
 		BrowserModule,
