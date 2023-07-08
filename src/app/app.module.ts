@@ -28,6 +28,9 @@ import { AddToHomescreenComponent } from './components/add-to-homescreen/add-to-
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { QrcodePageComponent } from './pages/qrcode-page/qrcode-page.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
+import { CheckForUpdateService } from './services/check-for-update.service';
+import { LogUpdateService } from './services/log-update.service';
+import { PromptUpdateService } from './services/prompt-update.service';
 
 
 @NgModule({
@@ -68,7 +71,11 @@ import { NotificationsComponent } from './components/notifications/notifications
 			registrationStrategy: 'registerWhenStable:30000'
 		})
 	],
-	providers: [],
+	providers: [
+		CheckForUpdateService,
+		LogUpdateService,
+		PromptUpdateService,
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

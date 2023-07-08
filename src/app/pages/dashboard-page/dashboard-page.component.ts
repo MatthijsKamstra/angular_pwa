@@ -11,9 +11,9 @@ export class DashboardPageComponent {
 
 	constructor(
 		private notificationService: NotificationService,
-		private logUpdateService: LogUpdateService,
+		// private logUpdateService: LogUpdateService,
 	) {
-		this.logUpdateService.hi();
+		// this.logUpdateService.hi();
 	}
 
 	onNotificationHandler() {
