@@ -44,6 +44,8 @@ export class DashboardPageComponent {
 		console.warn(this.updates.versionUpdates);
 
 		this.updates.versionUpdates.subscribe(evt => {
+			console.info('this.updates.versionUpdates.subscribe');
+			console.log(evt)
 			switch (evt.type) {
 				case 'VERSION_DETECTED':
 					console.log(`Downloading new app version: ${evt.version.hash}`);
