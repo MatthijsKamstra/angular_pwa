@@ -10,19 +10,20 @@ import { NotificationService } from 'src/app/services/notification.service';
 })
 export class DashboardPageComponent {
 
+
 	updateCheckText = '';
 
 	constructor(
 		private notificationService: NotificationService,
 		// private logUpdateService: LogUpdateService,
-		private update: SwUpdate
+		private updates: SwUpdate
 	) {
 		// this.logUpdateService.hi();
 	}
 
 
-	updateCheck(): void {
-		this.update
+	onUpdate(): void {
+		this.updates
 			.checkForUpdate()
 			.then(() => this.updateCheckText = 'resolved')
 			.catch(err => this.updateCheckText = `rejected: ${err.message}`);
@@ -32,4 +33,13 @@ export class DashboardPageComponent {
 		this.notificationService.info('Test info');
 	}
 
+
+	testHandler() {
+		this.notificationService.info('update');
+		this.onUpdate();
+
+		console.warn(this.updates.isEnabled);
+		console.warn(this.updates.unrecoverable);
+		console.warn(this.updates.versionUpdates);
+	}
 }
