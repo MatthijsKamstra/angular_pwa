@@ -92,6 +92,10 @@ export class AppComponent {
 }
 ```
 
+## 404
+
+- https://medium.com/sohoffice/404-page-for-github-pages-923d73c9ac8
+
 ## update
 
 SwUpdate service
