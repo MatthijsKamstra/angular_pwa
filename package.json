@@ -9,10 +9,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "git": "sh git.sh",
-    "build404": "sh git.sh",
+    "build404": "sh publish_404.sh",
     "__build:prod": "ng build --configuration production --base-href ./",
     "prebuild:prod": "npm run git",
-    "build:prod": "ng build --configuration production --base-href /angular_pwa/",
+    "build:prod": "ng build --configuration production --base-href /angular_pwa/ && npm run build404",
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
   },
   "private": true,

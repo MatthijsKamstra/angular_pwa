@@ -26,8 +26,8 @@ jobs:
       - name: Build
         run: npm run build:prod
 
-      - name: Create 404
-        run: cp dist/angular_pwa/index.html dist/angular_pwa/404.html
+      #   - name: Create 404
+      #     run: cp dist/angular_pwa/index.html dist/angular_pwa/404.html
 
       - name: Deploy
         if: success()
