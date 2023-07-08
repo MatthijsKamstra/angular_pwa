@@ -49,20 +49,20 @@ export class DashboardPageComponent {
 			switch (evt.type) {
 				case 'VERSION_DETECTED':
 					console.log(`Downloading new app version: ${evt.version.hash}`);
-					consoleLog(`Downloading new app version: ${evt.version.hash}`);
+					log(`Downloading new app version: ${evt.version.hash}`);
 					this.notificationService.info(`Downloading new app version: ${evt.version.hash}`);
 					break;
 				case 'VERSION_READY':
 					console.log(`Current app version: ${evt.currentVersion.hash}`);
 					console.log(`New app version ready for use: ${evt.latestVersion.hash}`);
-					consoleLog(`Current app version: ${evt.currentVersion.hash}`);
-					consoleLog(`New app version ready for use: ${evt.latestVersion.hash}`);
+					log(`Current app version: ${evt.currentVersion.hash}`);
+					log(`New app version ready for use: ${evt.latestVersion.hash}`);
 					this.notificationService.info(`Current app version: ${evt.currentVersion.hash}`);
 					this.notificationService.info(`New app version ready for use: ${evt.latestVersion.hash}`);
 					break;
 				case 'VERSION_INSTALLATION_FAILED':
 					console.log(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
-					consoleLog(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
+					log(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
 					this.notificationService.info(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
 					break;
 			}
@@ -70,6 +70,6 @@ export class DashboardPageComponent {
 	}
 }
 
-function consoleLog(msg: string) {
+function log(msg: string) {
 	console.log(msg);
 }
