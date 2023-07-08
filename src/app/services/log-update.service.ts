@@ -12,6 +12,8 @@ export class LogUpdateService {
 		updates: SwUpdate,
 		private notificationService: NotificationService
 	) {
+		console.warn('LogUpdateService');
+		console.warn(`updates.isEnabled: ${updates.isEnabled}`);
 		updates.versionUpdates.subscribe(evt => {
 			switch (evt.type) {
 				case 'VERSION_DETECTED':
